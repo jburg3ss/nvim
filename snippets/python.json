@@ -1,0 +1,89 @@
+{
+  "imp": {
+    "prefix": "imp",
+    "body": "import ${1:module}",
+    "description": "Import module"
+  },
+  "from": {
+    "prefix": "from",
+    "body": "from ${1:module} import ${2:name}",
+    "description": "From import"
+  },
+  "df": {
+    "prefix": "df",
+    "body": [
+      "def ${1:func_name}(${2}):",
+      "\t${3}"
+    ],
+    "description": "Function definition"
+  },
+  "adf": {
+    "prefix": "adf",
+    "body": [
+      "async def ${1:async_func}(${2}):",
+      "\t${3}"
+    ],
+    "description": "Async function definition"
+  },
+  "cls": {
+    "prefix": "cls",
+    "body": [
+      "class ${1:ClassName}:",
+      "\tdef __init__(self):",
+      "\t\t${2}"
+    ],
+    "description": "Class definition"
+  },
+  "dec": {
+    "prefix": "dec",
+    "body": [
+      "import functools",
+      "",
+      "def ${1:decorator_name}(func):",
+      "\t@functools.wraps(func)",
+      "\tdef wrapper_decorator(*args, **kwargs):",
+      "\t\t# Do something before",
+      "\t\tvalue = func(*args, **kwargs)",
+      "\t\t# Do something after",
+      "\t\treturn value",
+      "\treturn wrapper_decorator"
+    ],
+    "description": "Decorator template"
+  },
+  "main": {
+    "prefix": "main",
+    "body": [
+      "if __name__ == \"__main__\":",
+      "\t${1:main()}"
+    ],
+    "description": "Main guard"
+  },
+  "try": {
+    "prefix": "try",
+    "body": [
+      "try:",
+      "\t${1:# code}",
+      "except ${2:Exception} as e:",
+      "\t${3:# handle error}"
+    ],
+    "description": "Try-except block"
+  },
+  "with": {
+    "prefix": "with",
+    "body": [
+      "with ${1:expression} as ${2:target}:",
+      "\t${3}"
+    ],
+    "description": "With statement"
+  },
+  "lc": {
+    "prefix": "lc",
+    "body": "[${1:expr} for ${2:item} in ${3:iterable}]",
+    "description": "List comprehension"
+  },
+  "dc": {
+    "prefix": "dc",
+    "body": "{${1:key}: ${2:value} for ${3:item} in ${4:iterable}}",
+    "description": "Dict comprehension"
+  }
+}

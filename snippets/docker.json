@@ -1,0 +1,70 @@
+{
+  "from": {
+    "prefix": "from",
+    "body": "FROM ${1:ubuntu:22.04}",
+    "description": "Base image"
+  },
+  "run": {
+    "prefix": "run",
+    "body": "RUN ${1:command}",
+    "description": "Run command"
+  },
+  "copy": {
+    "prefix": "copy",
+    "body": "COPY ${1:src} ${2:dest}",
+    "description": "Copy files"
+  },
+  "workdir": {
+    "prefix": "workdir",
+    "body": "WORKDIR ${1:/app}",
+    "description": "Working directory"
+  },
+  "env": {
+    "prefix": "env",
+    "body": "ENV ${1:VAR}=${2:value}",
+    "description": "Environment variable"
+  },
+  "expose": {
+    "prefix": "expose",
+    "body": "EXPOSE ${1:8080}",
+    "description": "Expose port"
+  },
+  "cmd": {
+    "prefix": "cmd",
+    "body": "CMD [\"${1:python}\", \"${2:app.py}\"]",
+    "description": "Default command"
+  },
+  "entrypoint": {
+    "prefix": "entrypoint",
+    "body": "ENTRYPOINT [\"${1:/app/entrypoint.sh}\"]",
+    "description": "Entrypoint script"
+  },
+  "user": {
+    "prefix": "user",
+    "body": "USER ${1:appuser}",
+    "description": "Run as user"
+  },
+  "arg": {
+    "prefix": "arg",
+    "body": "ARG ${1:BUILD_DATE}",
+    "description": "Build argument"
+  },
+  "label": {
+    "prefix": "label",
+    "body": "LABEL ${1:version}=\"${2:1.0}\"",
+    "description": "Label metadata"
+  },
+  "volume": {
+    "prefix": "volume",
+    "body": "VOLUME [\"${1:/data}\"]",
+    "description": "Volume mount"
+  },
+  "healthcheck": {
+    "prefix": "healthcheck",
+    "body": [
+      "HEALTHCHECK --interval=30s --timeout=3s --start-period=5s --retries=3 \\",
+      "  CMD ${1:curl -f http://localhost:8080/health || exit 1}"
+    ],
+    "description": "Health check"
+  }
+}

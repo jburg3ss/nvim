@@ -1,0 +1,41 @@
+BasedOnStyle: LLVM
+Language: Cpp
+
+# Return type on its own line
+AlwaysBreakAfterReturnType: All
+
+SeparateDefinitionBlocks: Always
+
+# Allman/BSD brace style
+BreakBeforeBraces: Allman
+
+# Indentation
+IndentWidth: 4
+TabWidth: 2
+UseTab: Never
+AlignAfterOpenBracket: BlockIndent
+
+# Pointer alignment: `u_char *packet` (space before asterisk)
+PointerAlignment: Right
+
+# Line length
+ColumnLimit: 0
+
+# AlwaysBreakAfterOpeningBracket: AlwaysBreak
+# BinPackParameters: false
+
+# One parameter per line in declarations (like listener.h)
+BinPackParameters: false
+BinPackArguments: false
+AllowAllParametersOfDeclarationOnNextLine: false
+
+# Align trailing comments
+AlignTrailingComments: true
+
+# Keep short functions/blocks on single line? No.
+AllowShortFunctionsOnASingleLine: None
+AllowShortBlocksOnASingleLine: Never
+AllowShortIfStatementsOnASingleLine: Never
+
+# Switch/case indentation
+IndentCaseLabels: true

@@ -1,0 +1,77 @@
+{
+  "mov": {
+    "prefix": "mov",
+    "body": "mov ${1:dest}, ${2:src}",
+    "description": "Move instruction"
+  },
+  "push": {
+    "prefix": "push",
+    "body": "push ${1:reg}",
+    "description": "Push to stack"
+  },
+  "pop": {
+    "prefix": "pop",
+    "body": "pop ${1:reg}",
+    "description": "Pop from stack"
+  },
+  "call": {
+    "prefix": "call",
+    "body": "call ${1:function}",
+    "description": "Function call"
+  },
+  "ret": {
+    "prefix": "ret",
+    "body": "ret",
+    "description": "Return"
+  },
+  "label": {
+    "prefix": "lbl",
+    "body": "${1:label}:",
+    "description": "Label"
+  },
+  "jmp": {
+    "prefix": "jmp",
+    "body": "jmp ${1:label}",
+    "description": "Jump"
+  },
+  "je": {
+    "prefix": "je",
+    "body": "je ${1:label}",
+    "description": "Jump if equal"
+  },
+  "jne": {
+    "prefix": "jne",
+    "body": "jne ${1:label}",
+    "description": "Jump if not equal"
+  },
+  "cmp": {
+    "prefix": "cmp",
+    "body": "cmp ${1:op1}, ${2:op2}",
+    "description": "Compare"
+  },
+  "add": {
+    "prefix": "add",
+    "body": "add ${1:dest}, ${2:src}",
+    "description": "Add instruction"
+  },
+  "sub": {
+    "prefix": "sub",
+    "body": "sub ${1:dest}, ${2:src}",
+    "description": "Subtract instruction"
+  },
+  "xor": {
+    "prefix": "xor",
+    "body": "xor ${1:dest}, ${2:src}",
+    "description": "XOR instruction"
+  },
+  "lea": {
+    "prefix": "lea",
+    "body": "lea ${1:reg}, [${2:addr}]",
+    "description": "Load effective address"
+  },
+  "syscall": {
+    "prefix": "syscall",
+    "body": "syscall",
+    "description": "System call"
+  }
+}

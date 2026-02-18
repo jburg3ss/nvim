@@ -1,0 +1,132 @@
+{
+  "fn": {
+    "prefix": "fn",
+    "body": [
+      "function ${1:name}(${2:args}) {",
+      "  ${3}",
+      "}"
+    ],
+    "description": "Function declaration"
+  },
+  
+  "afn": {
+    "prefix": "afn",
+    "body": [
+      "const ${1:name} = (${2:args}) => {",
+      "  ${3}",
+      "};"
+    ],
+    "description": "Arrow function"
+  },
+  
+  "const": {
+    "prefix": "const",
+    "body": "const ${1:name} = ${2:value};",
+    "description": "Const declaration"
+  },
+  
+  "let": {
+    "prefix": "let",
+    "body": "let ${1:name} = ${2:value};",
+    "description": "Let declaration"
+  },
+  
+  "for": {
+    "prefix": "for",
+    "body": [
+      "for (let ${1:i} = 0; ${1:i} < ${2:length}; ${1:i}++) {",
+      "  ${3}",
+      "}"
+    ],
+    "description": "For loop"
+  },
+  
+  "foreach": {
+    "prefix": "foreach",
+    "body": [
+      "${1:array}.forEach((${2:item}) => {",
+      "  ${3}",
+      "});"
+    ],
+    "description": "ForEach loop"
+  },
+  
+  "if": {
+    "prefix": "if",
+    "body": [
+      "if (${1:condition}) {",
+      "  ${2}",
+      "}"
+    ],
+    "description": "If statement"
+  },
+  
+  "ifelse": {
+    "prefix": "ifelse",
+    "body": [
+      "if (${1:condition}) {",
+      "  ${2}",
+      "} else {",
+      "  ${3}",
+      "}"
+    ],
+    "description": "If-else statement"
+  },
+  
+  "try": {
+    "prefix": "try",
+    "body": [
+      "try {",
+      "  ${1}",
+      "} catch (${2:error}) {",
+      "  console.error(${2:error});",
+      "}"
+    ],
+    "description": "Try-catch block"
+  },
+  
+  "async": {
+    "prefix": "async",
+    "body": [
+      "async function ${1:name}(${2:args}) {",
+      "  ${3}",
+      "}"
+    ],
+    "description": "Async function"
+  },
+  
+  "await": {
+    "prefix": "await",
+    "body": "const ${1:result} = await ${2:promise};",
+    "description": "Await expression"
+  },
+  
+  "log": {
+    "prefix": "log",
+    "body": "console.log(${1:value});",
+    "description": "Console log"
+  },
+  
+  "class": {
+    "prefix": "class",
+    "body": [
+      "class ${1:ClassName} {",
+      "  constructor(${2:args}) {",
+      "    ${3}",
+      "  }",
+      "}"
+    ],
+    "description": "Class definition"
+  },
+  
+  "fetch": {
+    "prefix": "fetch",
+    "body": [
+      "fetch('${1:url}')",
+      "  .then(res => res.json())",
+      "  .then(data => ${2:console.log(data)})",
+      "  .catch(err => console.error(err));"
+    ],
+    "description": "Fetch request"
+  }
+}

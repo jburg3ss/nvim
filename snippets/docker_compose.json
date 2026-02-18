@@ -1,0 +1,57 @@
+{
+  "version": {
+    "prefix": "version",
+    "body": "version: '${1:3.8}'",
+    "description": "Compose version"
+  },
+  "service": {
+    "prefix": "service",
+    "body": [
+      "${1:service_name}:",
+      "  image: ${2:image:tag}",
+      "  container_name: ${3:name}",
+      "  ports:",
+      "    - \"${4:8080}:${5:8080}\"",
+      "  environment:",
+      "    - ${6:VAR}=${7:value}"
+    ],
+    "description": "Service definition"
+  },
+  "volumes": {
+    "prefix": "volumes",
+    "body": [
+      "volumes:",
+      "  ${1:volume_name}:"
+    ],
+    "description": "Volumes section"
+  },
+  "networks": {
+    "prefix": "networks",
+    "body": [
+      "networks:",
+      "  ${1:network_name}:",
+      "    driver: bridge"
+    ],
+    "description": "Networks section"
+  },
+  "depends": {
+    "prefix": "depends",
+    "body": [
+      "depends_on:",
+      "  ${1:service_name}:",
+      "    condition: service_healthy"
+    ],
+    "description": "Service dependency"
+  },
+  "env_file": {
+    "prefix": "env_file",
+    "body": "env_file: ${1:.env}",
+    "description": "Environment file"
+  },
+  "restart": {
+    "prefix": "restart",
+    "body": "restart_policy:",
+    "condition": "on-failure",
+    "description": "Restart policy"
+  }
+}

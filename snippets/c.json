@@ -1,0 +1,168 @@
+{
+  "main": {
+    "prefix": "main",
+    "body": [
+      "int",
+      "main(int argc, char *argv[])",
+      "{",
+      "  ${1}",
+      "  return 0;",
+      "}"
+    ],
+    "description": "C main function"
+  },
+  "func": {
+    "prefix": "func",
+    "body": [
+      "${1:void}",
+      "${2:function_name}(${3})",
+      "{",
+      "  ${4}",
+      "}"
+    ],
+    "description": "Function declaration"
+  },
+  "printf": {
+    "prefix": "printf",
+    "body": "printf(\"${1}\\n\"${2});",
+    "description": "Printf statement"
+  },
+  "fori": {
+    "prefix": "fori",
+    "body": [
+      "for (int ${1:i} = 0; ${1:i} < ${2:N}; ++${1:i})",
+      "{",
+      "  ${3}",
+      "}"
+    ],
+    "description": "For loop"
+  },
+  "while": {
+    "prefix": "while",
+    "body": [
+      "while (${1:condition})",
+      "{",
+      "  ${2}",
+      "}"
+    ],
+    "description": "While loop"
+  },
+  "if": {
+    "prefix": "if",
+    "body": [
+      "if (${1:condition})",
+      "{",
+      "  ${2}",
+      "}"
+    ],
+    "description": "If statement"
+  },
+  "elif": {
+    "prefix": "elif",
+    "body": [
+      "else if (${1:condition})",
+      "{",
+      "  ${2}",
+      "}"
+    ],
+    "description": "Else if statement"
+  },
+  "else": {
+    "prefix": "else",
+    "body": [
+      "else",
+      "{",
+      "  ${1}",
+      "}"
+    ],
+    "description": "Else statement"
+  },
+  "struct": {
+    "prefix": "struct",
+    "body": [
+      "struct ${1:Name}",
+      "{",
+      "  ${2}",
+      "};"
+    ],
+    "description": "Struct definition"
+  },
+  "typedef": {
+    "prefix": "typedef",
+    "body": [
+      "typedef struct",
+      "{",
+      "  ${1}",
+      "} ${2:TypeName};"
+    ],
+    "description": "Typedef struct"
+  },
+  "malloc": {
+    "prefix": "malloc",
+    "body": "${1:type} *${2:ptr} = (${1:type} *)malloc(sizeof(${1:type}) * ${3:count});",
+    "description": "Malloc allocation"
+  },
+  "free": {
+    "prefix": "free",
+    "body": "free(${1:ptr});",
+    "description": "Free memory"
+  },
+  "guard": {
+    "prefix": "guard",
+    "body": [
+      "#ifndef ${1:HEADER_H}",
+      "#define ${1:HEADER_H}",
+      "",
+      "${2}",
+      "",
+      "#endif /* ${1:HEADER_H} */"
+    ],
+    "description": "Header guard"
+  },
+  "include": {
+    "prefix": "include",
+    "body": "#include <${1:stdio.h}>",
+    "description": "Include system header"
+  },
+  "include_local": {
+    "prefix": "include_local",
+    "body": "#include \"${1:myheader.h}\"",
+    "description": "Include local header"
+  },
+  "define": {
+    "prefix": "define",
+    "body": "#define ${1:NAME} ${2:value}",
+    "description": "Define macro"
+  },
+  "enum": {
+    "prefix": "enum",
+    "body": [
+      "enum ${1:Name}",
+      "{",
+      "  ${2:VALUE1},",
+      "  ${3:VALUE2},",
+      "  ${4:VALUE3}",
+      "};"
+    ],
+    "description": "Enum definition"
+  },
+  "switch": {
+    "prefix": "switch",
+    "body": [
+      "switch (${1:expr})",
+      "{",
+      "  case ${2:VALUE}:",
+      "    ${3};",
+      "    break;",
+      "  default:",
+      "    break;",
+      "}"
+    ],
+    "description": "Switch statement"
+  },
+  "cast": {
+    "prefix": "cast",
+    "body": "(${1:type})${2:expr}",
+    "description": "Type cast"
+  }
+}

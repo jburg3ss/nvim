@@ -1,0 +1,72 @@
+{
+  "html5": {
+    "prefix": "html5",
+    "body": [
+      "<!DOCTYPE html>",
+      "<html lang=\"en\">",
+      "<head>",
+      "  <meta charset=\"UTF-8\">",
+      "  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">",
+      "  <title>${1:Page Title}</title>",
+      "</head>",
+      "<body>",
+      "  ${2}",
+      "</body>",
+      "</html>"
+    ],
+    "description": "HTML5 template"
+  },
+  "div": {
+    "prefix": "div",
+    "body": "<div class=\"${1:class}\">${2}</div>",
+    "description": "Div element"
+  },
+  "p": {
+    "prefix": "p",
+    "body": "<p>${1}</p>",
+    "description": "Paragraph"
+  },
+  "a": {
+    "prefix": "a",
+    "body": "<a href=\"${1:#}\">${2:link}</a>",
+    "description": "Anchor link"
+  },
+  "img": {
+    "prefix": "img",
+    "body": "<img src=\"${1:image.png}\" alt=\"${2:description}\">",
+    "description": "Image"
+  },
+  "button": {
+    "prefix": "button",
+    "body": "<button>${1:Click me}</button>",
+    "description": "Button"
+  },
+  "form": {
+    "prefix": "form",
+    "body": [
+      "<form action=\"${1:#}\" method=\"${2:POST}\">",
+      "  ${3}",
+      "</form>"
+    ],
+    "description": "Form"
+  },
+  "input": {
+    "prefix": "input",
+    "body": "<input type=\"${1:text}\" name=\"${2:name}\" placeholder=\"${3:placeholder}\">",
+    "description": "Input field"
+  },
+  "script": {
+    "prefix": "script",
+    "body": "<script src=\"${1:script.js}\"></script>",
+    "description": "Script tag"
+  },
+  "style": {
+    "prefix": "style",
+    "body": [
+      "<style>",
+      "  ${1}",
+      "</style>"
+    ],
+    "description": "Style tag"
+  }
+}

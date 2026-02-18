@@ -1,0 +1,15 @@
+line_width: 80
+tab_size: 2
+use_tabchars: false
+
+separate_ctrl_name_with_space: true
+separate_fn_name_with_space: true
+
+command_case: lower
+keyword_case: lower
+
+enable_sort: true
+autosort: true
+
+layout_passes: 2
+

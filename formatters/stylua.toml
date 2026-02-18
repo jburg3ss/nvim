@@ -1,0 +1,19 @@
+# Column width
+column_width = 100
+
+# Indentation
+indent_type = "Spaces"
+indent_width = 2
+
+# Line endings
+line_endings = "Unix"
+
+# Quote style
+quote_style = "AutoPreferDouble"
+
+# Call parentheses - "None" means no spaces inside parens
+call_parentheses = "None"
+
+# Collapse simple statements onto one line
+# Options: "Never", "FunctionOnly", "ConditionalOnly", "Always"
+collapse_simple_statement = "FunctionOnly"
