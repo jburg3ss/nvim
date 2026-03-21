@@ -101,14 +101,3 @@ vim.api.nvim_create_autocmd("BufWritePost", {
 })
 
 
-vim.api.nvim_create_autocmd("VimEnter", {
-  callback = function()
-    vim.fn.system("ghostty +set-config=background-opacity=1")
-  end,
-})
-
-vim.api.nvim_create_autocmd("VimLeave", {
-  callback = function()
-    vim.fn.system("ghostty +set-config=background-opacity=0.8")
-  end,
-})
