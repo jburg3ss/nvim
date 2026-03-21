@@ -66,7 +66,7 @@ vim.diagnostic.config {
 }
 
 -- Modular config loading
-local opts = { "appearance", "autocmd", "keymaps", "menu", "filetypes" }
+local opts = { "appearance", "autocmd", "keymaps", "menu", "filetypes", "diff" }
 for _, mod in ipairs(opts) do
   require("options." .. mod)
 end
